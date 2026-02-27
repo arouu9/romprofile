@@ -1,0 +1,33 @@
+/* TECH STACK */
+.tech-row {
+  margin-bottom: 20px;
+}
+
+.tech-title {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.tech-items {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-items span {
+  background: #f3f4f6;               /* light gray background */
+  padding: 6px 12px;
+  border-radius: 999px;              /* pill shape */
+  font-size: 13px;
+  border: 1px solid #cbd5e1;        /* light gray border */
+  color: #334155;                    /* text color */
+  transition: all 0.2s ease-in-out;  /* smooth hover effect */
+  cursor: pointer;
+}
+
+.tech-items span:hover {
+  background: #3b82f6;               /* blue background on hover */
+  border-color: #3b82f6;             /* match border to background */
+  color: white;                      /* text turns white on hover */
+}

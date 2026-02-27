@@ -1,0 +1,43 @@
+/* CERTIFICATIONS CARD GRID */
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* EACH CERTIFICATE CARD */
+.cert-card {
+  background: #f3f4f6;
+  padding: 10px 14px;
+  border-radius: 10px;
+  min-width: 140px; /* optional for consistent size */
+  flex: 1 1 auto; /* grow & wrap */
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+}
+
+/* TITLE & DESCRIPTION */
+.cert-card strong {
+  font-size: 14px;
+}
+
+.cert-card p {
+  font-size: 13px;
+  color: black;
+  margin: 0;
+}
+
+.cert-link {
+  font-size: 12px;
+  color: #3b82f6; /* Tailwind blue-500 color */
+  margin-top: 4px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cert-link:hover {
+  color: #2563eb; /* darker blue on hover */
+}

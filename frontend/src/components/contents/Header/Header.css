@@ -1,0 +1,108 @@
+/* HEADER CONTAINER */
+/* HEADER CONTAINER */
+.header {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 1000px;
+  align-items: stretch; /* ✅ stretch children to match tallest */
+}
+
+/* AVATAR WRAPPER */
+.avatar-wrapper {
+  display: flex;
+}
+
+.avatar {
+  height: 100%;         /* ✅ fill wrapper height (match header-info) */
+  max-height: 150px;    /* optional safety limit */
+  width: auto;          /* maintain aspect ratio */
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+/* TEXT COLUMN */
+.header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* NAME */
+.header-info h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* ADDRESS */
+.header-info .address {
+  margin-top: 2px;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #6b7280;
+}
+
+/* ROLE */
+.header-info .role {
+  margin-top: 0px;
+  font-size: 15px;
+  color: #494b4f;
+}
+
+/* BUTTONS */
+.header-info .buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+/* BUTTON BASE */
+button {
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* PRIMARY BUTTON */
+.primary {
+  background: #111;
+  color: white;
+  border: none;
+}
+
+/* OUTLINE BUTTON */
+.outline {
+  background: white;
+  border: 1px solid #d1d5db;
+}
+
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;       /* stack avatar and info vertically */
+    align-items: center;          /* center everything horizontally */
+    text-align: center;           /* center text inside header-info */
+    gap: 12px;                    /* smaller gap on mobile */
+  }
+
+  .avatar-wrapper {
+    width: auto;                  /* allow avatar to shrink */
+  }
+
+  .avatar {
+    max-height: 120px;            /* smaller avatar on mobile */
+    height: auto;                 /* let height adjust naturally */
+  }
+
+  .header-info {
+    align-items: center;          /* center the column items */
+  }
+
+  .header-info .buttons {
+    justify-content: center;      /* center buttons horizontally */
+  }
+}

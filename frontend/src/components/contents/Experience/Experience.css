@@ -1,0 +1,45 @@
+/* Experience */
+.timeline {
+  position: relative;
+  margin-top: 16px;
+  padding-left: 24px;
+}
+
+
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* Marker circle */
+.timeline-marker {
+  width: 12px;
+  height: 12px;
+  background: #f3f4f6; /* light fill */
+  border: 2px solid #111; /* dark border */
+  border-radius: 50%;
+  position: absolute;
+  left: -7px; /* centers on the line */
+  top: 5px;
+  z-index: 1;
+}
+
+.timeline-content {
+  padding-left: 12px;
+}
+
+.timeline-content strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.timeline-content p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+  color: #555;
+}
