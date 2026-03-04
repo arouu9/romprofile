@@ -11,31 +11,31 @@
 
 .title-icon {
   font-size: 20px;
-  color: #2563eb; /* blue accent */
+  color: #2563eb;
 }
 
-
-/* SWIPER FIX */
-.projects .swiper {
-  width: 100%;
-  padding-bottom: 0px;
+/* GRID LAYOUT */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: 1 column */
+  gap: 24px;
+  margin-top: 20px;
 }
 
-.projects .swiper-slide {
-  display: flex;
-  justify-content: center;
+/* 2 Columns for Tablet & Desktop (2x2 total since 4 items) */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* PROJECT CARD */
 .project-card {
   width: 100%;
-  max-width: 720px;
   background: #ffffff;
   border-radius: 14px;
-
-  border: 1px solid #e5e7eb; /* 👈 subtle border */
+  border: 1px solid #e5e7eb;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -44,7 +44,6 @@
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.12);
 }
-
 
 /* IMAGE */
 .project-card img {
@@ -72,8 +71,9 @@
   line-height: 1.4;
 }
 
-/* PAGINATION */
-.projects .swiper-pagination {
-  position: relative;
-  margin-top: 20px;
+
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* ensures the link covers the content */
 }
